@@ -1,13 +1,6 @@
-import GLOOP.*;
+class Main{
 
-public class Main {
-
-    public static void main(String[] args) {
-
-        new GLSchwenkkamera();
-        new GLLicht();
-
-        new GLWuerfel(0,0,0,100);
-
+    public static void main(String[] args){
+        Game Game = new Game();
     }
 }
