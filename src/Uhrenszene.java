@@ -18,7 +18,7 @@ public class Uhrenszene{
         kamera = new GLEntwicklerkamera();        
         licht  = new GLLicht();
         tastatur = new GLTastatur();
-        kamera.setzePosition(0,500,1300);
+        kamera.setzePosition(0,500,1600);
         kamera.setzeBlickpunkt(0,470,0);
         Date d = new Date(System.currentTimeMillis());
 
@@ -48,7 +48,7 @@ public class Uhrenszene{
 
 
 
-        //uhr4 = new Uhr(-470, 470,0,"Berlin");
+        uhr4 = new Uhr(-470, 800,-(stunden*30+60),-(minuten*6),-(sekunden*6),"Moskau");
         //uhr5 = new Uhr(470, 470);
         //uhr6 = new Uhr(0, 2*470);
         //uhr7 = new Uhr(0, 470);
@@ -58,7 +58,7 @@ public class Uhrenszene{
             uhr1.weiter(); 
             uhr2.weiter();    
             uhr3.weiter();
-            //uhr4.weiter();
+            uhr4.weiter();
             Sys.warte(1000);
         }
         Sys.beenden();
