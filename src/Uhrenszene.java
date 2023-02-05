@@ -22,11 +22,13 @@ public class Uhrenszene{
         kamera.setzeBlickpunkt(0,470,0);
         Date d = new Date(System.currentTimeMillis());
 
+
+        System.out.println(d);
         System.out.println(d.getHours());
         System.out.println(d.getMinutes());
         System.out.println(d.getSeconds());
 
-
+        //damit die Uhrzeit bei z.B. 15 Uhr nur 3 Stunden "dreht"
         if (d.getHours()>12){
              stunden = d.getHours()-12;
         }
@@ -41,17 +43,19 @@ public class Uhrenszene{
         uhr1 = new Uhr(0, 0,-(stunden*30),-(minuten*6),-(sekunden*6),"Berlin");
 
         //Tokio
-        uhr2 = new Uhr(470, 0,-(stunden*30+240),-(minuten*6),-(sekunden*6),"Tokio");
+        uhr2 = new Uhr(470, 0,-(stunden*30+(8*30)),-(minuten*6),-(sekunden*6),"Tokio");
 
         //New York
-        uhr3 = new Uhr(-470, 0,-(stunden*30-180),-(minuten*6),-(sekunden*6),"New York");
+        uhr3 = new Uhr(-470, 0,-(stunden*30-(6*30)),-(minuten*6),-(sekunden*6),"New York");
 
+        //Moskau
+        uhr4 = new Uhr(-470, 800,-(stunden*30-(2*30)),-(minuten*6),-(sekunden*6),"Moskau");
 
+        //Camberra
+        uhr5 = new Uhr(0, 800,-(stunden*30+(10*30)),-(minuten*6),-(sekunden*6),"Camberra");
 
-        uhr4 = new Uhr(-470, 800,-(stunden*30+60),-(minuten*6),-(sekunden*6),"Moskau");
-        //uhr5 = new Uhr(470, 470);
-        //uhr6 = new Uhr(0, 2*470);
-        //uhr7 = new Uhr(0, 470);
+        // Uhr 6
+        //uhr6 = new Uhr(470,800,-(stunden*30+(10*30))
         
         
         while (!tastatur.esc()){
@@ -59,6 +63,7 @@ public class Uhrenszene{
             uhr2.weiter();    
             uhr3.weiter();
             uhr4.weiter();
+            uhr5.weiter();
             Sys.warte(1000);
         }
         Sys.beenden();

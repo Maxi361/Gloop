@@ -1,10 +1,16 @@
 import GLOOP.*;
+
+import java.util.Date;
+
 public class Uhr{
     private Ziffernblatt dasZiffernblatt;   
     private Sekundenzeiger sekunde;
     private Minutenzeiger minute;
     private Stundenzeiger stunde;
     private GLTafel tafel;
+
+
+
 
     //private Zeiger sekunden, minuten, stunden;
     //[...]
@@ -16,6 +22,11 @@ public class Uhr{
         stunde = new Stundenzeiger(pX,pY,ZeigeranpassungStunden);
         tafel = new GLTafel(pX,pY+400,0,400,200);
         tafel.setzeText(stadt,100);
+
+        //Datum Tafel
+
+
+
     }
 
     public void weiter(){
