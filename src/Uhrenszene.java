@@ -27,6 +27,7 @@ public class Uhrenszene{
         System.out.println(d.getHours());
         System.out.println(d.getMinutes());
         System.out.println(d.getSeconds());
+        System.out.println(d.getDate());
 
         //damit die Uhrzeit bei z.B. 15 Uhr nur 3 Stunden "dreht"
         if (d.getHours()>12){
